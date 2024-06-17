@@ -16,8 +16,9 @@ public class MainPageTest {
     @BeforeAll
     static void registerDriver(){
         WebDriverManager.chromedriver().setup();
-//        System.setProperty("webdriver.chrome.driver", "C:\\Users\\kislo\\IdeaProjects\\projectOnline\\src\\main\\resources\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "C:\\Users\\kislo\\IdeaProjects\\projectOnline\\src\\main\\resources\\chromedriver.exe");
     }
+
 @BeforeEach    public void setUp() {
 
 //        ChromeOptions options = new ChromeOptions();
