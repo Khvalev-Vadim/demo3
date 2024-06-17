@@ -17,6 +17,11 @@
     <allure.version>2.24.0</allure.version>  </properties>
 
   <dependencies>
+      <dependency>
+          <groupId>io.github.bonigarcia</groupId>
+          <artifactId>webdrivermanager</artifactId>
+          <version>5.8.0</version>
+      </dependency>
     <dependency>
       <groupId>org.seleniumhq.selenium</groupId>
       <artifactId>selenium-java</artifactId>

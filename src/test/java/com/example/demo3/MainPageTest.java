@@ -1,4 +1,5 @@
 package com.example.demo3;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.*;
 import static org.junit.jupiter.api.Assertions.*;
 import org.openqa.selenium.By;
@@ -12,7 +13,13 @@ public class MainPageTest {
     private WebDriver driver;
     private MainPage mainPage;
 
+    @BeforeAll
+    static void registerDriver(){
+        WebDriverManager.chromedriver().setup();
+//        System.setProperty("webdriver.chrome.driver", "C:\\Users\\kislo\\IdeaProjects\\projectOnline\\src\\main\\resources\\chromedriver.exe");
+    }
 @BeforeEach    public void setUp() {
+
         ChromeOptions options = new ChromeOptions();
         // Fix the issue https://github.com/SeleniumHQ/selenium/issues/11750
         options.addArguments("--remote-allow-origins=*");
