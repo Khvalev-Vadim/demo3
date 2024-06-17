@@ -12,6 +12,7 @@ import java.time.Duration;
 public class MainPageTest {
     public WebDriver driver;
     public MainPage mainPage;
+    public ChromeOptions options;
 
     @BeforeAll
     static void registerDriver(){
@@ -21,13 +22,13 @@ public class MainPageTest {
 
 @BeforeEach    public void setUp() {
 
-//        ChromeOptions options = new ChromeOptions();
-        // Fix the issue https://github.com/SeleniumHQ/selenium/issues/11750
-//        options.addArguments("--remote-allow-origins=*");
-//        driver = new ChromeDriver(options);
-//        driver.manage().window().maximize();
-//        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        driver = new ChromeDriver();
+//        WebDriverManager.chromedriver().setup();
+        options = new ChromeOptions();
+        options.addArguments("--headless");
+        options.addArguments("--no-sandbox");
+        options.addArguments("--disable-dev-shm-usage");
+        options.addArguments("--remote-allow-origins=*");  // Чтобы разрешить все источники
+        driver = new ChromeDriver(options);
         driver.get("https://www.jetbrains.com/");
 
         mainPage = new MainPage(driver);
