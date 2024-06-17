@@ -6,7 +6,7 @@ import org.openqa.selenium.support.PageFactory;
 
 // page_url = https://www.jetbrains.com/
 public class MainPage {
-    private WebDriver driver;
+    public WebDriver driver;
 
     @FindBy(xpath = "//*[@data-test-marker='Developer Tools']")
     public WebElement seeDeveloperToolsButton;

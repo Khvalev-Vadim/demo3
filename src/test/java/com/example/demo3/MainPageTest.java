@@ -10,13 +10,13 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import java.time.Duration;
 
 public class MainPageTest {
-    private WebDriver driver;
-    private MainPage mainPage;
+    public WebDriver driver;
+    public MainPage mainPage;
 
     @BeforeAll
     static void registerDriver(){
         WebDriverManager.chromedriver().setup();
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\kislo\\IdeaProjects\\projectOnline\\src\\main\\resources\\chromedriver.exe");
+//        System.setProperty("webdriver.chrome.driver", "C:\\Users\\kislo\\IdeaProjects\\projectOnline\\src\\main\\resources\\chromedriver.exe");
     }
 
 @BeforeEach    public void setUp() {
