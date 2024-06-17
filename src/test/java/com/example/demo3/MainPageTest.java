@@ -39,7 +39,7 @@ public class MainPageTest {
         submitButton.click();
 
         WebElement searchPageField = driver.findElement(By.cssSelector("input[data-test='search-input']"));
-assertEquals("Selenium", searchPageField.getAttribute("value"));    }
+assertEquals("Selenium1", searchPageField.getAttribute("value"));    }
 
     @Test
     public void toolsMenu() {
